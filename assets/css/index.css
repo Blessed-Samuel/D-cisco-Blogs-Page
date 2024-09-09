@@ -1,0 +1,131 @@
+main{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+
+.caption{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.75px solid #707070;
+}
+
+.date, .author, .time-to-read, .blog-content{
+    font-family: "Lexend", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: #777777;
+}
+
+.blog-title{
+    font-family: "Lexend", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #2F2F2F;
+}
+
+.blog-content{
+    color: #6A6A6A;
+}
+
+.view-more{
+    color: black;
+    font-family: "Lexend", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.wrapper{
+    /* position: relative; */
+    #blogs{
+        max-width: 860px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 40px;
+        margin-bottom: 40px;
+    }
+
+    .blog{
+        /* height: 300px; */
+        width: 410px;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+footer{
+    position: relative;
+    height: 52px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#page-nav-wrapper{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    top: 0;
+    left: 33%;
+    .page-nav{
+        height: 50px;
+        width: 50px;
+        border: 1px solid black;
+        border-radius: 10px;
+        font-family: "Lexend", sans-serif;
+        text-align: center;
+        line-height: 50px;
+        font-weight: 300;
+        color: black;
+    }
+    #page-next{
+        background: url('../images/ic_outline-arrow-forward-ios.png') no-repeat center;
+        transform: rotate(0.5turn);
+    }
+    #page-back{
+        background: url('../images/ic_outline-arrow-forward-ios.png') no-repeat center;
+    }
+}
+
+@media (max-width: 1198px) {
+    .wrapper{
+        #blogs{
+            max-width: 400px;
+            justify-content: center;
+        }
+    }
+}
+
+@media (max-width: 760px) {
+    .wrapper{
+        #blogs{
+            margin: 0;
+            width: 100%
+        }
+
+        .blog{
+            width: 350px;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    #page-nav-wrapper{
+        opacity: 1;
+        margin: 1.5rem;
+        gap: 10px;
+        left: unset;
+        right: unset;
+        .page-nav{
+            height: 30px;
+            width: 30px;
+            border-radius: 2px;
+            line-height: 25px;
+        }
+    }
+}
